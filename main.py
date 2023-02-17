@@ -1168,7 +1168,7 @@ def update_searches(driver):
         PC = driver.find_element(By.XPATH, value='//*[@id="userPointsBreakdown"]/div/div[2]/div/div[1]/div/div[2]/mee-rewards-user-points-details/div/div/div/div/p[2]').text.replace(" ", "").split("/")
         
         if (int(PC[0]) < int(PC[1])):
-            PC_SEARCHES = int((int(PC[1]) - int(PC[0])) / 5)
+            PC_SEARCHES = int((int(PC[1]) - int(PC[0])) / 3)
             print(f'\tPC Searches Left:\t{PC_SEARCHES}')
         else:
             PC_SEARCHES = 0
@@ -1177,7 +1177,7 @@ def update_searches(driver):
         if (int(PC[1]) > 50):
             MOBILE = driver.find_element(By.XPATH, value='//*[@id="userPointsBreakdown"]/div/div[2]/div/div[2]/div/div[2]/mee-rewards-user-points-details/div/div/div/div/p[2]').text.replace(" ", "").split("/")
             if (int(MOBILE[0]) < int(MOBILE[1])):
-                MOBILE_SEARCHES = int((int(MOBILE[1]) - int(MOBILE[0])) / 5)
+                MOBILE_SEARCHES = int((int(MOBILE[1]) - int(MOBILE[0])) / 3)
                 print(f'\tMobile Searches Left:\t{MOBILE_SEARCHES}')
             else:
                 MOBILE_SEARCHES = 0
